@@ -9,6 +9,9 @@ inputs:
   app_id:
     description: 'The App ID'
     required: true
+  argocd_appenv:
+    description: 'The ArgoCD Password'
+    required: true
   argocd_username:
     description: 'The ArgoCD Username'
     required: true
@@ -16,10 +19,12 @@ inputs:
     description: 'The ArgoCD Password'
     required: true
 
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.app_id }}
+    - ${{ inputs.argocd_appenv }}
     - ${{ inputs.argocd_username }}
     - ${{ inputs.argocd_password }}

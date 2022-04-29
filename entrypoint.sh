@@ -4,10 +4,11 @@ argocd version --short
 
 # /envs
 export APPID=$1
-export USERNAME=$2
-export PASSWORD=$3
+export APPENV=$2
+export USERNAME=$3
+export PASSWORD=$4
 export ARGOURL="argocd-server.argocd.svc.cluster.local"
-export APPENV=$4
+
 
 printf "\033[0;32m=====> Login ArgoCD URL: $ARGOURL \033[0m\n"
 argocd login --insecure --username $USERNAME --password $PASSWORD $ARGOURL
