@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-argo version --short
+argocd version --short
 
 # /envs
 APPID=$1
