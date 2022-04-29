@@ -11,7 +11,7 @@ RUN apk add bash git curl gzip --update --no-cache bash
 RUN curl -sLO https://github.com/argoproj/argo-workflows/releases/download/${ARGO_VERSION}/argo-linux-amd64.gz
 RUN gzip -d argo-linux-amd64.gz
 RUN chmod +x argo-linux-amd64
-RUN mv ./argo-linux-amd64 /usr/local/bin/argo
+RUN mv ./argo-linux-amd64 /usr/local/bin/argocd
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
